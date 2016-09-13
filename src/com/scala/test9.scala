@@ -11,7 +11,7 @@ object test9 {
   	def main(args: Array[String]) 
 	{ 
      val u = normalRDD(sc, 10L, 2)//生成10个服从正态分布的随机数
-     //u.collect().foreach { println}
+     u.collect().foreach { println}
      val pos = LabeledPoint(1.0, Vectors.dense(1.0, 0.0, 3.0))
      println(pos.features)
      println(pos.label)
