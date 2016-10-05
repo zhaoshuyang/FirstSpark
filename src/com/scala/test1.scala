@@ -10,7 +10,7 @@ object test1
 		val logFile = "hdfs://192.168.68.128:9000/user/hadoop/input/core-site.xml"
 	    val conf = new SparkConf().setAppName("Simple Application").setMaster("local")
 		val sc = new SparkContext(conf)
-		val data=sc.textFile(logFile).filter(a=>a.contains("cont"));
+		val data=sc.textFile(logFile).filter(a=>a.contains("contain"));
 		data.collect.foreach(println);
 /*		val data=sc.textFile(logFile).map(line => line.split(",")).map(x=>(x(0),x(1),x(2),x(3),x(4)))
 		val data_t=sc.textFile(logFile).flatMap(line => line.split(","))
